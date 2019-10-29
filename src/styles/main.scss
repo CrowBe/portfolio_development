@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Poppins&display=swap');
+
+$serif-font: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+$sans-serif-font: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+
+.App {
+  text-align: center;
+}
+
+.HomePage {
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+}
+
+.IntroCard {
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 15vw 0 15vw;
+  font-size: smaller;
+  color: rgb(0, 0, 0);
+  text-align: center;
+
+  h1 {
+    font-family: $serif-font;
+    margin: 0;      
+  }
+
+  h3 {
+    font-family: $serif-font;
+  }
+
+  span {
+    display: block;
+    font-family: $sans-serif-font;
+  }
+}
+
+.AvatarCard {
+  padding: 2vh 0 2vh;
+  display: flex;
+  justify-content: center;
+}
+.Avatar {
+  display: block;
+  height: 30vmin;
+  border-radius: 50%;
+}
+
+.pc-tablet-phone {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25vw;
+}
+
+.AboutMePage {
+  position: relative;
+  background-color: #ffff;
+  height: 100vh;
+  width: 100vw;
+}
+
+.AboutMeContent {
+  background-color: #ffff;
+  position: fixed;
+  right: 20vw;
+  bottom: 20vh;
+  height: 60vh;
+  width: 60vw;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px #00000088;
+  overflow: hidden;
+
+  h2 {
+      font-family: $serif-font;
+  }
+
+  span {
+      padding: 0 3px;
+      font-family: $sans-serif-font;
+  }
+
+  .About {
+      position: absolute;
+      top: 0;
+      border-radius: 20px;
+      box-shadow: inset 0 0 10px #00000088;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+  }
+}
+
+.hidden {
+    display: none;
+}
+
+.AboutMeColor {
+  background-color: #0066ff;
+  position: fixed;
+  bottom: 0;
+  height: 50vh;
+  width: 100vw;
+  box-shadow: 0 0 5px 10px #0066ff;
+}
+
+.AboutMeMenu {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    button {
+        font-family: $serif-font;
+        width: 20vw;
+        padding: 10px 0;
+        color: rgb(0, 0, 0) !important;
+        text-decoration: none;
+        background-color: #0066ff00;
+        display: inline-block;
+    }
+    .toggled {
+        background-color: #ff9900;
+    }
+    #career {
+        border-bottom-left-radius: 20px;
+    }
+    #personal {
+        border-bottom-right-radius: 20px;
+    }
+}
+
+// .activeButton {
+//     background-color: #ff9900;
+// }
+.mountain-climb {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20vw;
+}
+
+.ButtonCard {
+  display: flex;
+  padding-top: 4vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.AboutMeButton {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #0066ff;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+.AboutMeButton:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.75);
+  transition: all 0.4s ease 0s;
+}
