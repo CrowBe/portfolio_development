@@ -61,12 +61,18 @@
   display: block;
   height: 30vmin;
   border-radius: 50%;
-  padding-bottom: 5vh;
+  margin-bottom: 3vh;
 }
 
-.clipartsHome img {
+.clipartsHome {
+  position: fixed;
   bottom: 0;
-  height: 20vh;
+  width: 100vw;
+  height: 15vh;
+}
+.clipartsHome img {
+  height: 100%;
+  bottom: 0;
 }
 .clipartsHome #pc-tablet-phone {
   position: absolute;
@@ -215,7 +221,7 @@
 
 .contentColor {
   background-color: #0066ff;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   height: 50vh;
   width: 100vw;

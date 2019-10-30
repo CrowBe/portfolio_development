@@ -16,7 +16,7 @@ const SummaryContent = () => {
                 During that time I was married and began considering a career change to better fit that change in lifestyle.
             </span>
             <span>
-                I undertook self-directed study in programming and, after developing a love for it, was recently able to complete an intensive course in Web Development.
+                I undertook self-directed study in programming and, after developing a love for it, was recently able to complete a course in Web Development.
             </span>
         </div>
     );
