@@ -16,9 +16,9 @@ class App extends Component {
             <div className="AppDiv">
                 <NavBar/>
                 <Switch>
-                    <Route exact path="/web_portfolio" component={HomePage} />
                     <Route exact path="/aboutme" component={AboutMePage} />
                     <Route exact path="/projects" component={ProjectsPage}  />
+                    <Route path="/" component={HomePage} />
                 </Switch>
             </div>
         </Router>
