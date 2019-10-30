@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
     return (
         <div className="NavBar" >
-            <Link to="/">
+            <Link to="/web_portfolio">
                 <div className='homeIcon' >
                 </div>
             </Link>
