@@ -2,7 +2,7 @@
   "name": "new-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://CrowBe.github.io/web_portfolio",
+  "homepage": "https://CrowBe.github.io/",
   "dependencies": {
     "@babel/core": "^7.6.4",
     "babel-loader": "^8.0.6",
