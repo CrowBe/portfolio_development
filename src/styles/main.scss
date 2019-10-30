@@ -2,6 +2,8 @@
 
 $serif-font: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
 $sans-serif-font: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+$primary-color: #0066ff;
+$secondary-color: #ff9900;
 
 .App {
   text-align: center;
@@ -12,11 +14,33 @@ $sans-serif-font: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgb(255, 255, 255);
 }
 
+.NavBar {
+  position: fixed;
+  display: flex;
+  width: 50%;
+  z-index: 1;
+  a {
+    font-family: $sans-serif-font;
+    color: $secondary-color;
+    padding: 10px 5vw;
+    text-decoration: none;
+  }
+  .homeIcon {
+    padding-top: 4vh;
+    height: 60px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url('./../assets/images/home-clipart.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
 .IntroCard {
   display: flex;
   flex-direction: column;
-  padding: 10vh 15vw 0 15vw;
-  font-size: smaller;
+  padding: 15vh 15vw 0 15vw;
   color: rgb(0, 0, 0);
   text-align: center;
 
@@ -32,6 +56,7 @@ $sans-serif-font: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
   span {
     display: block;
     font-family: $sans-serif-font;
+    font-style: italic;
   }
 }
 
@@ -44,23 +69,75 @@ $sans-serif-font: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
   display: block;
   height: 30vmin;
   border-radius: 50%;
+  padding-bottom: 5vh;
 }
 
-.pc-tablet-phone {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 25vw;
+.clipartsHome {
+  img {
+    bottom: 0;
+    height: 20vh;
+  }
+  #pc-tablet-phone {
+    position: absolute;
+    left: 0;
+  }
+
+  #soccerball {
+    position: absolute;
+    left: 30vh;
+  }
+
+  #mountain-climb {
+    position: absolute;
+    right: 0;
+  }
 }
 
-.AboutMePage {
+.ButtonCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#projectsButtonCard {
+  position: fixed;
+  bottom: 5vh;
+  width: 100vw
+}
+
+.linkButton {
+  color: #fff;
+  font-family: $sans-serif-font;
+  text-decoration: none;
+  background: $primary-color;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+#projectsLinkButton {
+  background: $secondary-color;
+}
+
+.linkButton:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.75);
+  transition: all 0.4s ease 0s;
+}
+
+
+// Styling that applies to both Content Pages -- About Me and Projects
+
+.contentPage {
   position: relative;
   background-color: #ffff;
   height: 100vh;
   width: 100vw;
 }
 
-.AboutMeContent {
+.contentSection {
   background-color: #ffff;
   position: fixed;
   right: 20vw;
@@ -76,12 +153,15 @@ $sans-serif-font: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
       font-family: $serif-font;
   }
 
-  span {
-      padding: 0 3px;
-      font-family: $sans-serif-font;
+  .contentSummary {
+    position: absolute;
+    height: 85%;
+    padding: 0 2vw;
+    font-family: $sans-serif-font;
+    overflow: auto;
   }
 
-  .About {
+  .content {
       position: absolute;
       top: 0;
       border-radius: 20px;
@@ -92,20 +172,106 @@ $sans-serif-font: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
   }
 }
 
+.educationText {
+  padding: 0 2vw;
+  font-family: $serif-font;
+  height: 85%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  span {
+    font-family: $sans-serif-font;
+    padding-bottom: 2vh;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.careerText {
+  padding: 0 2vw;
+  font-family: $serif-font;
+  height: 85%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  span {
+    font-family: $sans-serif-font; 
+    padding-bottom: 5px; 
+  }
+  td {
+    font-family: $sans-serif-font;
+    border: solid 1px rgba(0, 0, 0, 0.212);
+  }
+}
+
+.skillsText {
+  height: 85%;
+  overflow: auto;
+  h3 {
+    margin: 0;
+    font-size: larger;
+    text-decoration: underline;
+  }
+  span {
+    padding-top: 2vh;
+    font-size: smaller;
+  }
+  .skillsList {
+    padding-left: 10vw;
+    ul {
+      margin: 0;
+    }
+    li {
+      text-align: left;
+      font-family: $serif-font;
+    }
+  }
+}
+
 .hidden {
     display: none;
 }
 
-.AboutMeColor {
-  background-color: #0066ff;
+.contentColor {
+  background-color: $primary-color;
   position: fixed;
   bottom: 0;
   height: 50vh;
   width: 100vw;
-  box-shadow: 0 0 5px 10px #0066ff;
+  box-shadow: 0 0 5px 10px $primary-color;
+
+  .coffeeClipart {
+    position: fixed;
+    bottom: -3vh;
+    right: -4vh;
+    img {
+      display: inline-block;
+      height: 20vh;
+    }
+  }
+
+  .bookClipart {
+    position: fixed;
+    bottom: -2vh;
+    right: 8vw;
+    img {
+      display: inline-block;
+      width: 20vw;
+    }
+  }
+
+
+  .mouseClipart {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    img {
+      display: inline-block;
+      height: 15vh;
+    }
+  }
 }
 
-.AboutMeMenu {
+.contentMenu {
     display: flex;
     position: absolute;
     bottom: 0;
@@ -116,13 +282,20 @@ $sans-serif-font: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
         font-family: $serif-font;
         width: 20vw;
         padding: 10px 0;
-        color: rgb(0, 0, 0) !important;
+        color: rgb(255, 255, 255);
         text-decoration: none;
-        background-color: #0066ff00;
+        background-color: $primary-color;
         display: inline-block;
+        :hover {
+          text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+          box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.75);
+          transition: all 0.4s ease 0s;
+        }
     }
     .toggled {
-        background-color: #ff9900;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border-top: none;
     }
     #career {
         border-bottom-left-radius: 20px;
@@ -132,36 +305,87 @@ $sans-serif-font: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
     }
 }
 
-// .activeButton {
-//     background-color: #ff9900;
-// }
-.mountain-climb {
+// Project Page specific styles
+
+
+
+
+.stackImages {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 20vw;
-}
-
-.ButtonCard {
   display: flex;
-  padding-top: 4vh;
-  align-items: center;
-  justify-content: center;
+  bottom: 0;
+  justify-content: space-around;
+  width: 100vw;
+  padding-bottom: 1vh;
+  div {
+    width: 11vh;
+    height: 11vh;
+    padding-bottom: 1vh;
+  }
+  .javaScriptImg {
+    background: rgba(255, 255, 255, 0) url('./../assets/images/JavaScript.png') center no-repeat;
+    background-size: contain;
+  }
+  .mongoDBImg {
+    background: rgba(255, 255, 255, 0) url('./../assets/images/mongodb-transparent.png') center no-repeat;
+    background-size: contain;
+  }
+  .rubyImg {
+    background: rgba(255, 255, 255, 0) url('./../assets/images/ruby-rails.png') center no-repeat;
+    background-size: contain;
+  }
+  .htmlImg {
+    background: rgba(255, 255, 255, 0) url('./../assets/images/html5.png') center no-repeat;
+    background-size: contain;
+  }
+  .cssImg {
+    background: rgba(255, 255, 255, 0) url('./../assets/images/css3.png') center no-repeat;
+    background-size: contain;
+  }
+  .pythonImg {
+    background: rgba(255, 255, 255, 0) url('./../assets/images/python.png') center no-repeat;
+    background-size: contain;
+  }
 }
 
-.AboutMeButton {
-  color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #0066ff;
-  padding: 20px;
-  border-radius: 20px;
-  display: inline-block;
-  border: none;
-  transition: all 0.4s ease 0s;
+@media only screen and (max-width: 767px) {
+  .AppDiv {
+    h1 {
+      font-size: 1.5em;
+    }
+    font-size: smaller;
+  }
+  #pc-tablet-phone {
+    height: 10vh;
+  }
+  #soccerball {
+    height: 10vh;
+  }
+  #mountain-climb {
+    height: 10vh;
+  }
+
+  .contentSection {
+    right: 14vw;
+    bottom: 14vh;
+    height: 65vh;
+    width: 72vw;
+  }
+  .contentMenu {
+    button {
+      width: 24vw;
+    }
+  }
 }
-.AboutMeButton:hover {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-  box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.75);
-  transition: all 0.4s ease 0s;
+
+@media only screen and (min-width: 768px) {
+  .AppDiv {
+    font-size: large;
+    .contentToggleButton {
+      font-size: large;
+    }
+    .linkButton {
+      font-size: x-large;
+    }
+  }
 }

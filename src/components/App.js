@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
 import { Router, Route, Switch } from "react-router-dom";
+import NavBar from './pageElements/Navbar';
 import history from "./../history";
 import HomePage from "./pages/HomePage";
-import AboutMe from "./pages/AboutMe"
+import AboutMePage from "./pages/AboutMePage"
+import ProjectsPage from "./pages/ProjectsPage"
 import '../styles/main.css';
 
 class App extends Component {
 
   render() {
-      const { token } = this.props;
-
+    
       return (
-          <Router history={history}>
-              <div className="AppDiv">
-                  { token && <h4>User Logged In!</h4>}
-                  <Switch>
-                      <Route exact path="/" component={HomePage} />
-                      <Route path="/aboutme" component={AboutMe} />
-                  </Switch>
-              </div>
-          </Router>
+        <Router history={history}>
+            <div className="AppDiv">
+                <NavBar/>
+                <Switch>
+                    <Route exact path="/" component={HomePage} />
+                    <Route path="/aboutme" component={AboutMePage} />
+                    <Route path="/projects" component={ProjectsPage}  />
+                </Switch>
+            </div>
+        </Router>
       );
   }
 }

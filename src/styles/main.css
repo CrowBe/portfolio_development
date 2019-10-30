@@ -8,11 +8,33 @@
   background-color: white;
 }
 
+.NavBar {
+  position: fixed;
+  display: flex;
+  width: 50%;
+  z-index: 1;
+}
+.NavBar a {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  color: #ff9900;
+  padding: 10px 5vw;
+  text-decoration: none;
+}
+.NavBar .homeIcon {
+  padding-top: 4vh;
+  height: 60px;
+  width: 60px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("./../assets/images/home-clipart.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .IntroCard {
   display: flex;
   flex-direction: column;
-  padding: 10vh 15vw 0 15vw;
-  font-size: smaller;
+  padding: 15vh 15vw 0 15vw;
   color: black;
   text-align: center;
 }
@@ -26,6 +48,7 @@
 .IntroCard span {
   display: block;
   font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
 }
 
 .AvatarCard {
@@ -38,23 +61,68 @@
   display: block;
   height: 30vmin;
   border-radius: 50%;
+  padding-bottom: 5vh;
 }
 
-.pc-tablet-phone {
+.clipartsHome img {
+  bottom: 0;
+  height: 20vh;
+}
+.clipartsHome #pc-tablet-phone {
   position: absolute;
   left: 0;
-  bottom: 0;
-  width: 25vw;
+}
+.clipartsHome #soccerball {
+  position: absolute;
+  left: 30vh;
+}
+.clipartsHome #mountain-climb {
+  position: absolute;
+  right: 0;
 }
 
-.AboutMePage {
+.ButtonCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#projectsButtonCard {
+  position: fixed;
+  bottom: 5vh;
+  width: 100vw;
+}
+
+.linkButton {
+  color: #fff;
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  background: #0066ff;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+#projectsLinkButton {
+  background: #ff9900;
+}
+
+.linkButton:hover {
+  text-shadow: 0px 0px 6px white;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.75);
+  transition: all 0.4s ease 0s;
+}
+
+.contentPage {
   position: relative;
   background-color: #ffff;
   height: 100vh;
   width: 100vw;
 }
 
-.AboutMeContent {
+.contentSection {
   background-color: #ffff;
   position: fixed;
   right: 20vw;
@@ -66,14 +134,17 @@
   box-shadow: inset 0 0 10px #00000088;
   overflow: hidden;
 }
-.AboutMeContent h2 {
+.contentSection h2 {
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
 }
-.AboutMeContent span {
-  padding: 0 3px;
+.contentSection .contentSummary {
+  position: absolute;
+  height: 85%;
+  padding: 0 2vw;
   font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  overflow: auto;
 }
-.AboutMeContent .About {
+.contentSection .content {
   position: absolute;
   top: 0;
   border-radius: 20px;
@@ -83,11 +154,66 @@
   background-color: white;
 }
 
+.educationText {
+  padding: 0 2vw;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  height: 85%;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.educationText span {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 2vh;
+}
+.educationText h3 {
+  margin-bottom: 0;
+}
+
+.careerText {
+  padding: 0 2vw;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  height: 85%;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.careerText span {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 5px;
+}
+.careerText td {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  border: solid 1px rgba(0, 0, 0, 0.212);
+}
+
+.skillsText {
+  height: 85%;
+  overflow: auto;
+}
+.skillsText h3 {
+  margin: 0;
+  font-size: larger;
+  text-decoration: underline;
+}
+.skillsText span {
+  padding-top: 2vh;
+  font-size: smaller;
+}
+.skillsText .skillsList {
+  padding-left: 10vw;
+}
+.skillsText .skillsList ul {
+  margin: 0;
+}
+.skillsText .skillsList li {
+  text-align: left;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+}
+
 .hidden {
   display: none;
 }
 
-.AboutMeColor {
+.contentColor {
   background-color: #0066ff;
   position: fixed;
   bottom: 0;
@@ -95,8 +221,35 @@
   width: 100vw;
   box-shadow: 0 0 5px 10px #0066ff;
 }
+.contentColor .coffeeClipart {
+  position: fixed;
+  bottom: -3vh;
+  right: -4vh;
+}
+.contentColor .coffeeClipart img {
+  display: inline-block;
+  height: 20vh;
+}
+.contentColor .bookClipart {
+  position: fixed;
+  bottom: -2vh;
+  right: 8vw;
+}
+.contentColor .bookClipart img {
+  display: inline-block;
+  width: 20vw;
+}
+.contentColor .mouseClipart {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.contentColor .mouseClipart img {
+  display: inline-block;
+  height: 15vh;
+}
 
-.AboutMeMenu {
+.contentMenu {
   display: flex;
   position: absolute;
   bottom: 0;
@@ -104,55 +257,111 @@
   justify-content: center;
   overflow: hidden;
 }
-.AboutMeMenu button {
+.contentMenu button {
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   width: 20vw;
   padding: 10px 0;
-  color: black !important;
+  color: white;
   text-decoration: none;
-  background-color: #0066ff00;
+  background-color: #0066ff;
   display: inline-block;
 }
-.AboutMeMenu .toggled {
-  background-color: #ff9900;
-}
-.AboutMeMenu #career {
-  border-bottom-left-radius: 20px;
-}
-.AboutMeMenu #personal {
-  border-bottom-right-radius: 20px;
-}
-
-.mountain-climb {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 20vw;
-}
-
-.ButtonCard {
-  display: flex;
-  padding-top: 4vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.AboutMeButton {
-  color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #0066ff;
-  padding: 20px;
-  border-radius: 20px;
-  display: inline-block;
-  border: none;
-  transition: all 0.4s ease 0s;
-}
-
-.AboutMeButton:hover {
+.contentMenu button :hover {
   text-shadow: 0px 0px 6px white;
   box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.75);
   transition: all 0.4s ease 0s;
+}
+.contentMenu .toggled {
+  background-color: #ffffff;
+  color: black;
+  border-top: none;
+}
+.contentMenu #career {
+  border-bottom-left-radius: 20px;
+}
+.contentMenu #personal {
+  border-bottom-right-radius: 20px;
+}
+
+.stackImages {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  justify-content: space-around;
+  width: 100vw;
+  padding-bottom: 1vh;
+}
+.stackImages div {
+  width: 11vh;
+  height: 11vh;
+  padding-bottom: 1vh;
+}
+.stackImages .javaScriptImg {
+  background: rgba(255, 255, 255, 0) url("./../assets/images/JavaScript.png") center no-repeat;
+  background-size: contain;
+}
+.stackImages .mongoDBImg {
+  background: rgba(255, 255, 255, 0) url("./../assets/images/mongodb-transparent.png") center no-repeat;
+  background-size: contain;
+}
+.stackImages .rubyImg {
+  background: rgba(255, 255, 255, 0) url("./../assets/images/ruby-rails.png") center no-repeat;
+  background-size: contain;
+}
+.stackImages .htmlImg {
+  background: rgba(255, 255, 255, 0) url("./../assets/images/html5.png") center no-repeat;
+  background-size: contain;
+}
+.stackImages .cssImg {
+  background: rgba(255, 255, 255, 0) url("./../assets/images/css3.png") center no-repeat;
+  background-size: contain;
+}
+.stackImages .pythonImg {
+  background: rgba(255, 255, 255, 0) url("./../assets/images/python.png") center no-repeat;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 767px) {
+  .AppDiv {
+    font-size: smaller;
+  }
+  .AppDiv h1 {
+    font-size: 1.5em;
+  }
+
+  #pc-tablet-phone {
+    height: 10vh;
+  }
+
+  #soccerball {
+    height: 10vh;
+  }
+
+  #mountain-climb {
+    height: 10vh;
+  }
+
+  .contentSection {
+    right: 14vw;
+    bottom: 14vh;
+    height: 65vh;
+    width: 72vw;
+  }
+
+  .contentMenu button {
+    width: 24vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .AppDiv {
+    font-size: large;
+  }
+  .AppDiv .contentToggleButton {
+    font-size: large;
+  }
+  .AppDiv .linkButton {
+    font-size: x-large;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
