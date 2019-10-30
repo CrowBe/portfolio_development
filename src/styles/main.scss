@@ -110,7 +110,7 @@ $secondary-color: #ff9900;
   font-family: $sans-serif-font;
   text-decoration: none;
   background: $primary-color;
-  padding: 20px;
+  padding: 15px;
   border-radius: 20px;
   display: inline-block;
   border: none;
@@ -126,9 +126,6 @@ $secondary-color: #ff9900;
   box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.75);
   transition: all 0.4s ease 0s;
 }
-
-
-// Styling that applies to both Content Pages -- About Me and Projects
 
 .contentPage {
   position: relative;
