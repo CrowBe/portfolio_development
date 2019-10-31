@@ -9,93 +9,146 @@ $secondary-color: #ff9900;
   text-align: center;
 }
 
-.HomePage {
-  height: 100vh;
-  background-color: rgb(255, 255, 255);
-}
+// Navigation Bar Styling
 
 .NavBar {
   position: fixed;
   display: flex;
-  width: 50%;
-  z-index: 1;
+  top: 0;
+  width: 100vw;
   a {
-    font-family: $sans-serif-font;
-    color: $secondary-color;
-    padding: 10px 5vw;
-    text-decoration: none;
+    padding: 2vh 2vw;
   }
   .homeIcon {
     padding-top: 4vh;
-    height: 60px;
+    height: 40px;
     width: 60px;
     background-color: rgba(255, 255, 255, 0);
     background-image: url('./../assets/images/home-clipart.png');
-    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
   }
-}
 
-.IntroCard {
-  display: flex;
-  flex-direction: column;
-  padding: 15vh 15vw 0 15vw;
-  color: rgb(0, 0, 0);
-  text-align: center;
-
-  h1 {
-    font-family: $serif-font;
-    margin: 0;      
+  #navButton {
+    color: $secondary-color;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #0066ffab;
+    margin-top: 10px;
+    &:hover {
+      background-color: #0066ff;
+      color: white;
+    }
   }
 
-  h3 {
-    font-family: $serif-font;
+  .dropMenuButtonCard {
+    position: absolute;
+    right: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  span {
-    display: block;
+  #contactMenuButton {
     font-family: $sans-serif-font;
-    font-style: italic;
+    background-color: $secondary-color;
+    color: white;
+    padding: 10px 5px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #ffffffab;
+    &:hover {
+      background-color: #0066ff;
+    }
   }
-}
-
-.AvatarCard {
-  padding: 2vh 0 2vh;
-  display: flex;
-  justify-content: center;
-}
-.Avatar {
-  display: block;
-  height: 30vmin;
-  border-radius: 50%;
-  margin-bottom: 3vh;
-}
-
-.clipartsHome {
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-  height: 15vh;
-  img {
-    height: 100%;
-    bottom: 0;
-  }
-  #pc-tablet-phone {
-    position: absolute;
-    left: 0;
-  }
-
-  #soccerball {
-    position: absolute;
-    left: 30vh;
-  }
-
-  #mountain-climb {
+  .contactMeMenu {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     right: 0;
+    top: 12vh;
+    background: rgb(255, 255, 255);
+    div {
+      display: flex;
+      justify-content: center;
+      width: 20vw;
+      // border: solid 1px rgba(0, 0, 0, 0.527);
+    }
   }
 }
+
+// Home Page Styling
+
+.HomePage {
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+
+  .IntroCard {
+    display: flex;
+    flex-direction: column;
+    padding: 15vh 15vw 0 15vw;
+    color: rgb(0, 0, 0);
+    text-align: center;
+
+    h1 {
+      font-family: $serif-font;
+      margin: 0;      
+    }
+
+    h3 {
+      font-family: $serif-font;
+    }
+
+    span {
+      display: block;
+      font-family: $sans-serif-font;
+      font-style: italic;
+    }
+  }
+
+  .AvatarCard {
+    padding: 2vh 0 2vh;
+    display: flex;
+    justify-content: center;
+  }
+  .Avatar {
+    display: block;
+    height: 30vmin;
+    border-radius: 50%;
+    margin-bottom: 3vh;
+  }
+
+  .clipartsHome {
+    position: fixed;
+    top: 85vh;
+    width: 100vw;
+    height: 15vh;
+    img {
+      height: 100%;
+      bottom: 0;
+    }
+    #pc-tablet-phone {
+      position: absolute;
+      left: 0;
+    }
+
+    #soccerball {
+      position: absolute;
+      left: 30vh;
+    }
+
+    #mountain-climb {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+
+// Styling for repeated components
 
 .ButtonCard {
   display: flex;
@@ -122,7 +175,8 @@ $secondary-color: #ff9900;
 }
 
 #projectsLinkButton {
-  background: $secondary-color;
+  background: #5398ff;
+  border: solid 1px rgba(0, 0, 0, 0.205);
 }
 
 .linkButton:hover {
@@ -133,7 +187,6 @@ $secondary-color: #ff9900;
 
 .contentPage {
   position: relative;
-  background-color: #ffff;
   height: 100vh;
   width: 100vw;
 }
@@ -143,7 +196,7 @@ $secondary-color: #ff9900;
   position: fixed;
   right: 20vw;
   bottom: 20vh;
-  height: 60vh;
+  height: 65vh;
   width: 60vw;
   text-align: center;
   border-radius: 20px;
@@ -176,7 +229,7 @@ $secondary-color: #ff9900;
 .educationText {
   padding: 0 2vw;
   font-family: $serif-font;
-  height: 85%;
+  height: 90%;
   overflow: auto;
   scroll-behavior: smooth;
   span {
@@ -191,7 +244,7 @@ $secondary-color: #ff9900;
 .careerText {
   padding: 0 2vw;
   font-family: $serif-font;
-  height: 85%;
+  height: 90%;
   overflow: auto;
   scroll-behavior: smooth;
   span {
@@ -205,7 +258,7 @@ $secondary-color: #ff9900;
 }
 
 .skillsText {
-  height: 85%;
+  height: 90%;
   overflow: auto;
   h3 {
     margin: 0;
@@ -225,6 +278,87 @@ $secondary-color: #ff9900;
       text-align: left;
       font-family: $serif-font;
     }
+  }
+}
+
+.portfolioContent {
+  height: 90%;
+  overflow: auto;
+  padding: 0 3vw;
+  font-family: $serif-font;
+  p {
+    font-family: $sans-serif-font;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    button {
+      border-radius: 5px;
+      background-color: #0066ff4b;
+      padding: 5px;
+      margin: 2px;
+    }
+  }
+}
+
+.previousContent {
+  height: 90%;
+  overflow: auto;
+  padding: 0 3vw;
+  font-family: $serif-font;
+  p {
+    font-family: $sans-serif-font;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    button {
+      border-radius: 5px;
+      background-color: #0066ff4b;
+      padding: 5px;
+      margin: 2px;
+    }
+  }
+}
+
+.currentContent {
+  height: 90%;
+  overflow: auto;
+  padding: 0 3vw;
+  font-family: $serif-font;
+  p {
+    font-family: $sans-serif-font;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    button {
+      border-radius: 5px;
+      background-color: #0066ff4b;
+      padding: 5px;
+      margin: 2px;
+    }
+  }
+}
+
+.screenshotContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 85%;
+  overflow: auto;
+  .appScreenshots {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5vh;
+  }
+  .projectManagementScreenshots {
+    display: flex;
+    justify-content: center;    
+  }
+  img {
+    display: block;
+    width: 80%;
   }
 }
 
@@ -279,17 +413,17 @@ $secondary-color: #ff9900;
     width: 100%;
     justify-content: center;
     overflow: hidden;
-    button {
+    .contentToggleButton {
         font-family: $serif-font;
-        width: 20vw;
         padding: 10px 0;
+        width: calc(100%  /3);
         color: rgb(255, 255, 255);
         text-decoration: none;
-        background-color: $primary-color;
+        background-color: #0066ffb0;
         display: inline-block;
-        :hover {
-          text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-          box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.75);
+        &:hover {
+          text-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
+          background: $primary-color;
           transition: all 0.4s ease 0s;
         }
     }
@@ -301,7 +435,7 @@ $secondary-color: #ff9900;
     #career {
         border-bottom-left-radius: 20px;
     }
-    #personal {
+    #skills {
         border-bottom-right-radius: 20px;
     }
 }
@@ -321,7 +455,7 @@ $secondary-color: #ff9900;
   div {
     width: 11vh;
     height: 11vh;
-    padding-bottom: 1vh;
+    margin: 1vh 1vw 0;
   }
   .javaScriptImg {
     background: rgba(255, 255, 255, 0) url('./../assets/images/JavaScript.png') center no-repeat;
@@ -368,8 +502,6 @@ $secondary-color: #ff9900;
 
   .contentSection {
     right: 14vw;
-    bottom: 14vh;
-    height: 65vh;
     width: 72vw;
   }
   .contentMenu {
@@ -386,6 +518,12 @@ $secondary-color: #ff9900;
       font-size: large;
     }
     .linkButton {
+      font-size: x-large;
+    }
+    #navButton {
+      font-size: x-large;
+    }
+    #contactMenuButton {
       font-size: x-large;
     }
   }

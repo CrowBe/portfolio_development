@@ -3,86 +3,124 @@
   text-align: center;
 }
 
+.NavBar {
+  position: fixed;
+  display: flex;
+  top: 0;
+  width: 100vw;
+}
+.NavBar a {
+  padding: 2vh 2vw;
+}
+.NavBar .homeIcon {
+  padding-top: 4vh;
+  height: 40px;
+  width: 60px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url("./../assets/images/home-clipart.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.NavBar #navButton {
+  color: #ff9900;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px #0066ffab;
+  margin-top: 10px;
+}
+.NavBar #navButton:hover {
+  background-color: #0066ff;
+  color: white;
+}
+.NavBar .dropMenuButtonCard {
+  position: absolute;
+  right: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.NavBar #contactMenuButton {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #ff9900;
+  color: white;
+  padding: 10px 5px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px #ffffffab;
+}
+.NavBar #contactMenuButton:hover {
+  background-color: #0066ff;
+}
+.NavBar .contactMeMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 12vh;
+  background: white;
+}
+.NavBar .contactMeMenu div {
+  display: flex;
+  justify-content: center;
+  width: 20vw;
+}
+
 .HomePage {
   height: 100vh;
   background-color: white;
 }
-
-.NavBar {
-  position: fixed;
-  display: flex;
-  width: 50%;
-  z-index: 1;
-}
-.NavBar a {
-  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
-  color: #ff9900;
-  padding: 10px 5vw;
-  text-decoration: none;
-}
-.NavBar .homeIcon {
-  padding-top: 4vh;
-  height: 60px;
-  width: 60px;
-  background-color: rgba(255, 255, 255, 0);
-  background-image: url("./../assets/images/home-clipart.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.IntroCard {
+.HomePage .IntroCard {
   display: flex;
   flex-direction: column;
   padding: 15vh 15vw 0 15vw;
   color: black;
   text-align: center;
 }
-.IntroCard h1 {
+.HomePage .IntroCard h1 {
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   margin: 0;
 }
-.IntroCard h3 {
+.HomePage .IntroCard h3 {
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
 }
-.IntroCard span {
+.HomePage .IntroCard span {
   display: block;
   font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
   font-style: italic;
 }
-
-.AvatarCard {
+.HomePage .AvatarCard {
   padding: 2vh 0 2vh;
   display: flex;
   justify-content: center;
 }
-
-.Avatar {
+.HomePage .Avatar {
   display: block;
   height: 30vmin;
   border-radius: 50%;
   margin-bottom: 3vh;
 }
-
-.clipartsHome {
+.HomePage .clipartsHome {
   position: fixed;
-  bottom: 0;
+  top: 85vh;
   width: 100vw;
   height: 15vh;
 }
-.clipartsHome img {
+.HomePage .clipartsHome img {
   height: 100%;
   bottom: 0;
 }
-.clipartsHome #pc-tablet-phone {
+.HomePage .clipartsHome #pc-tablet-phone {
   position: absolute;
   left: 0;
 }
-.clipartsHome #soccerball {
+.HomePage .clipartsHome #soccerball {
   position: absolute;
   left: 30vh;
 }
-.clipartsHome #mountain-climb {
+.HomePage .clipartsHome #mountain-climb {
   position: absolute;
   right: 0;
 }
@@ -112,7 +150,8 @@
 }
 
 #projectsLinkButton {
-  background: #ff9900;
+  background: #5398ff;
+  border: solid 1px rgba(0, 0, 0, 0.205);
 }
 
 .linkButton:hover {
@@ -123,7 +162,6 @@
 
 .contentPage {
   position: relative;
-  background-color: #ffff;
   height: 100vh;
   width: 100vw;
 }
@@ -133,7 +171,7 @@
   position: fixed;
   right: 20vw;
   bottom: 20vh;
-  height: 60vh;
+  height: 65vh;
   width: 60vw;
   text-align: center;
   border-radius: 20px;
@@ -163,7 +201,7 @@
 .educationText {
   padding: 0 2vw;
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
-  height: 85%;
+  height: 90%;
   overflow: auto;
   scroll-behavior: smooth;
 }
@@ -178,7 +216,7 @@
 .careerText {
   padding: 0 2vw;
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
-  height: 85%;
+  height: 90%;
   overflow: auto;
   scroll-behavior: smooth;
 }
@@ -192,7 +230,7 @@
 }
 
 .skillsText {
-  height: 85%;
+  height: 90%;
   overflow: auto;
 }
 .skillsText h3 {
@@ -213,6 +251,87 @@
 .skillsText .skillsList li {
   text-align: left;
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+}
+
+.portfolioContent {
+  height: 90%;
+  overflow: auto;
+  padding: 0 3vw;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+}
+.portfolioContent p {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+}
+.portfolioContent a {
+  display: block;
+  text-decoration: none;
+}
+.portfolioContent a button {
+  border-radius: 5px;
+  background-color: #0066ff4b;
+  padding: 5px;
+  margin: 2px;
+}
+
+.previousContent {
+  height: 90%;
+  overflow: auto;
+  padding: 0 3vw;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+}
+.previousContent p {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+}
+.previousContent a {
+  display: block;
+  text-decoration: none;
+}
+.previousContent a button {
+  border-radius: 5px;
+  background-color: #0066ff4b;
+  padding: 5px;
+  margin: 2px;
+}
+
+.currentContent {
+  height: 90%;
+  overflow: auto;
+  padding: 0 3vw;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+}
+.currentContent p {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+}
+.currentContent a {
+  display: block;
+  text-decoration: none;
+}
+.currentContent a button {
+  border-radius: 5px;
+  background-color: #0066ff4b;
+  padding: 5px;
+  margin: 2px;
+}
+
+.screenshotContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 85%;
+  overflow: auto;
+}
+.screenshotContent .appScreenshots {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5vh;
+}
+.screenshotContent .projectManagementScreenshots {
+  display: flex;
+  justify-content: center;
+}
+.screenshotContent img {
+  display: block;
+  width: 80%;
 }
 
 .hidden {
@@ -263,18 +382,18 @@
   justify-content: center;
   overflow: hidden;
 }
-.contentMenu button {
+.contentMenu .contentToggleButton {
   font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
-  width: 20vw;
   padding: 10px 0;
+  width: calc(100% /3);
   color: white;
   text-decoration: none;
-  background-color: #0066ff;
+  background-color: #0066ffb0;
   display: inline-block;
 }
-.contentMenu button :hover {
-  text-shadow: 0px 0px 6px white;
-  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.75);
+.contentMenu .contentToggleButton:hover {
+  text-shadow: 0px 0px 12px white;
+  background: #0066ff;
   transition: all 0.4s ease 0s;
 }
 .contentMenu .toggled {
@@ -285,7 +404,7 @@
 .contentMenu #career {
   border-bottom-left-radius: 20px;
 }
-.contentMenu #personal {
+.contentMenu #skills {
   border-bottom-right-radius: 20px;
 }
 
@@ -300,7 +419,7 @@
 .stackImages div {
   width: 11vh;
   height: 11vh;
-  padding-bottom: 1vh;
+  margin: 1vh 1vw 0;
 }
 .stackImages .javaScriptImg {
   background: rgba(255, 255, 255, 0) url("./../assets/images/JavaScript.png") center no-repeat;
@@ -349,8 +468,6 @@
 
   .contentSection {
     right: 14vw;
-    bottom: 14vh;
-    height: 65vh;
     width: 72vw;
   }
 
@@ -366,6 +483,12 @@
     font-size: large;
   }
   .AppDiv .linkButton {
+    font-size: x-large;
+  }
+  .AppDiv #navButton {
+    font-size: x-large;
+  }
+  .AppDiv #contactMenuButton {
     font-size: x-large;
   }
 }

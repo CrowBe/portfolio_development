@@ -8,7 +8,7 @@ const SummaryContent = () => {
                 I worked and studied in the outdoors for around seven years after completing my schooling. That included:
             </span>
                 <ul>
-                    <li> A one year program in the Army, where I developed discipline and teamwork</li>
+                    <li> A one year program in the Army, as a driver, where I developed discipline and teamwork</li>
                     <li> Two years of study at Avondale College, for which I was awarded a partial scholarship due to schooling achievements</li>
                     <li> Over four years in the industry as an instructor, including a team management position, where I built skills in problem solving and leadership.</li>
                 </ul>

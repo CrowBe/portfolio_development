@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
-import EducationContent from '../pageElements/EducationContent';
-import CareerContent from '../pageElements/CareerContent';
-import SummaryContent from '../pageElements/SummaryContent';
-import SkillsContent from '../pageElements/SkillsContent';
+import EducationContent from '../pageElements/about/EducationContent';
+import CareerContent from '../pageElements/about/CareerContent';
+import SummaryContent from '../pageElements/about/SummaryContent';
+import SkillsContent from '../pageElements/about/SkillsContent';
 import coffeeCup from './../../assets/images/coffee-cup.png';
 import bookClipart from './../../assets/images/book-clipart.png';
 import mouseClipart from './../../assets/images/white-mouse-clipart.png';

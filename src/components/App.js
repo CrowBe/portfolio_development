@@ -14,12 +14,13 @@ class App extends Component {
       return (
         <Router history={history}>
             <div className="AppDiv">
-                <NavBar/>
+                
                 <Switch>
                     <Route exact path="/aboutme" component={AboutMePage} />
                     <Route exact path="/projects" component={ProjectsPage}  />
                     <Route path="/" component={HomePage} />
                 </Switch>
+                <NavBar/>
             </div>
         </Router>
       );

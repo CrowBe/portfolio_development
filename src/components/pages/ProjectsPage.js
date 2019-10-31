@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import PortfolioContent from '../pageElements/project/PortfolioContent';
+import PreviousContent from '../pageElements/project/PreviousContent';
+import ScreenshotContent from '../pageElements/project/ScreenshotContent';
+import CurrentContent from '../pageElements/project/CurrentContent';
 
 class ProjectsPage extends Component {
 
@@ -32,49 +36,15 @@ class ProjectsPage extends Component {
                 <div className="contentColor" id ="projectsColor">
                 </div>
                 <div className="contentSection">
+                    <PortfolioContent />
                     <div className="content previous hidden">
-
-                        <div className="firstPortfolio">
-                            <h2>Original portfolio website</h2>
-                            <p>
-                                The next assignment in our Diploma required us to build a portfolio website, using primarily HTML5 and CSS3.
-                                The website is no longer live as I have built this to replace it but you can see the gitHub code for reference to how my develoment skills have progressed.
-                        </p>
-                            <a href="https://github.com/CrowBe/old_portfolio" target='blank'>Link to Github Code</a>
-                        </div>
-                        <div className="rubyApplication">
-                            <h2>Music Suggestions App</h2>
-                            <p>
-                                During my Diploma, our first assignment asked us to create a Ruby terminal application (app) in pairs.
-                                My partner Mike and I decided to make a program that would recommend a song based on your mood or an occasion.
-                                The application asks for user input in a series of steps. Once it has narrowed the selection it generates a random selection from a database.
-                            </p>
-                            <a href="" target='blank'>Link to Github Code</a>
-                        </div>
-                        <div className="pythonGame">
-                            <h2>Basic RPG Text Game</h2>
-                            <p>
-                                This is the first fully functional terminal app that I built.
-                                It is written in Python utilizes classes, methods, functions, python packages, variables, user input and more.
-                                I built it during an online course that I completed in 2017.
-                            </p>
-                            <div class="pygame">
-                                <a href="https://trinket.io/embed/python3/c94822e364?runOption=run&start=result" target='blank'>Link To Interactive Shell</a>
-                            </div>
-                        </div>
+                        <PreviousContent/>
                     </div>
                     <div className='content screenshots hidden'>
+                        <ScreenshotContent />
                     </div>
                     <div className='content current hidden'>
-                        <div className="fullStackApp">
-                            <h2>Business Workflow Application</h2>
-                            <p>
-                                This is the final assignment in the Diploma and was developed using Reactjs as a frontend.
-                                Express and Node function were used to build the backend and MongoDB was used for database and cloud storage.
-                                The application was deployed using Heroku and Amazon S3. As it was completed during my move to Tokyo the application is still in progress but you can see the current code on Github.
-                            </p>
-                            <a href="https://github.com/CrowBe/first_mern_app" target='blank'>Link to Github Code</a>
-                        </div>
+                        <CurrentContent />
                     </div>
                     <div className='contentMenu' id="projectsMenu">
                         <button className="contentToggleButton" id="previous" onClick={contentToggle}>Previous</button>

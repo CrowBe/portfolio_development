@@ -33,20 +33,17 @@ const SkillsContent = () => {
                     </ol>
                 </li>
                 <li>
-                    <h4>Project and Design Tools</h4>
+                    <h4>Third Party Tools</h4>
                     <ol>
                         <li>Github - Source Control</li>
                         <li>Balsamiq - Wireframing</li>
-                        <li>Trello - Task Management</li>
-                    </ol>
-                </li>
-                <li>
-                    <h4>Third Party Applications</h4>
-                    <ol>
+                        <li>Trello - Feature Planning</li>
+                        <li>Monday.com - Project Timelining/Sprint Management</li>
                         <li>MongoDB - Local and Cloud Database</li>
                         <li>Google Cloud Platform</li>
                         <li>Amazon Web Services</li>
-                        <li>Heroku</li>
+                        <li>Heroku - Deployment</li>
+                        <li>Visual Paradigm Online - ERD Design</li>
                     </ol>
                 </li>
             </ul>

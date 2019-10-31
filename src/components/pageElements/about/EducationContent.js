@@ -8,7 +8,7 @@ const EducationContent = () => {
             <h4>Coder Academy 2019</h4>
             <span>
                 This full time course used dynamic teaching alongside individual and team project work to develop industry relevant technical skills such as Ruby on Rails, express.js, MongoDB and others.
-                It also established key project skills such as wire framing, source control, TDD/BDD and more.
+                It also established key project skills such as wire framing, source control, agile methodology and more.
             </span>
             <h3>Online Programming Courses</h3>
             <h4>Stackskills, Udemy, Zenva 2017-current</h4>
