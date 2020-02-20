@@ -122,7 +122,7 @@ $secondary-color: #ff9900;
   }
 
   .clipartsHome {
-    position: fixed;
+    position: absolute;
     top: 85vh;
     width: 100vw;
     height: 15vh;
@@ -154,6 +154,7 @@ $secondary-color: #ff9900;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 }
 
 #projectsButtonCard {

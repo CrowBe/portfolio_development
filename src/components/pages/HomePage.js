@@ -25,15 +25,15 @@ class HomePage extends Component {
                 <div className="AvatarCard" >
                     <img className="Avatar" src={avatar} alt="cartoon of man's face. Brown hair, blue eyes, light skin and a small smile."/>
                 </div>
-                <div className="ButtonCard">
-                    <Link to="/aboutme">
-                        <button className="linkButton">Learn More About Me</button>
-                    </Link>
-                </div>
                 <div className="clipartsHome">
                     <img id="pc-tablet-phone" src={pptc} alt="pc, tablet and phone"/>
                     <img id="soccerball" src={soccerball} alt="soccerball"/>
                     <img id="mountain-climb" src={mountainClimb} alt="man on top of mountain with helmet and rope" />
+                </div>
+                <div className="ButtonCard">
+                    <Link to="/aboutme">
+                        <button className="linkButton">Learn More About Me</button>
+                    </Link>
                 </div>
 
             </div>
